@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* ■■■■■ ШРИФТЫ ■■■■■■■■■■■■■■■■■■■■■■ */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+/* ■■■■■ ОБНУЛЯЮЩИЕ СТИЛИ ■■■■■■■■■■■■ */
+body {
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+body *::before, body *::after {
+  box-sizing: border-box;
+}
+
+header, nav, main, footer, section, aside,
+img, picture, video, canvas, svg,
+label, summary, source, iframe {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input, button, textarea, select {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button, select, input[type=submit], input[type=file], input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+/* ■■■■■ БАЗОВЫЕ СТИЛИ ■■■■■■■■■■■■■■■ */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+}
+@supports (-webkit-tap-highlight-color: transparent) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.page-wrapper {
+  min-height: 100%;
+  overflow: clip;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+.container--xs {
+  max-width: 320px;
+}
+.container--sm {
+  max-width: 500px;
+}
+.container--md {
+  max-width: 800px;
+}
+.container--lg {
+  max-width: 1200px;
+}
+
+.none, [none] {
+  display: none !important;
+}
+
+:root {
+  --ff-body: "Rubik", sans-serif;
+  --ff-heading: "Nunito", sans-serif;
+  --ff-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: var(--ff-body, sans-serif);
+}
+
+.page-wrapper {
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+  padding-block: 1em;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: var(--ff-heading, sans-serif);
+  text-align: center;
+  color: #444;
+}
+
+/* ■■■■■ СТИЛИ САЙТА ■■■■■■■■■■■■■■■■■ */
+.input-search {
+  --spacer: .7em;
+  --clr-hue: 210;
+  --clr-placeholder: hsl(0 0% 65%);
+  position: relative;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+.input-search input[type=search] {
+  width: 100%;
+  padding: var(--spacer) var(--spacer) var(--spacer) calc(var(--spacer) * 4);
+  border: none;
+  border-radius: 0.5em;
+  outline: 2px solid transparent;
+  color: hsl(var(--clr-hue), 80%, 60%);
+  background-color: hsl(var(--clr-hue), 80%, 97%);
+}
+.input-search input[type=search]:focus {
+  outline-color: currentColor;
+}
+.input-search input[type=search]:focus + svg {
+  stroke: hsl(var(--clr-hue), 80%, 60%);
+}
+.input-search input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+.input-search input[type=search]::placeholder {
+  color: var(--clr-placeholder);
+}
+.input-search svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--spacer);
+  width: calc(var(--spacer) * 2);
+  aspect-ratio: 1;
+  stroke: var(--clr-placeholder);
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=style.css.map */
